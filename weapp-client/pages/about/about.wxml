@@ -1,0 +1,10 @@
+<!--pages/about/about.wxml-->
+<view class="container">
+  <view class="code">
+    <image style="width: 400rpx; height: 400rpx;" src="/images/wxapp-code.jpg" bindtap="handlepic"></image>
+  </view>
+  <text class="title">食贝</text>
+  <text class="sub-title">1.0</text>
+  <text class="info">食贝（Food Bay）是一款基于校内食堂实时就餐情况与用户偏好，提供智能美食推荐的生活类微信小程序。</text>
+  <text class="info">在这里你能够快速一览所有食堂的拥挤程度，打开食贝FM来看看给你的推荐，还可以收藏喜欢的菜肴或食堂并享给身边的人。食贝在手，吃饭不愁！</text>
+</view>

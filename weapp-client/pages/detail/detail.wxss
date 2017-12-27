@@ -1,0 +1,105 @@
+/* pages/fm/fm.wxss */
+.img {
+  height: 860rpx;
+  width: 750rpx;
+}
+
+.card {
+  background-color: #FFF;
+  height: 260rpx;
+  width: 690rpx;
+  border-radius: 3px;
+  box-shadow: 0px 2px 3px rgba(60,60,60,0.05);
+  position: fixed;
+  bottom: 200rpx;
+  left: 30rpx;
+}
+
+.block {
+  margin: 32rpx 50rpx 28rpx 32rpx;
+}
+
+.head-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3E3E3E;
+}
+
+.sub-title {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #808080;
+}
+
+.information {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-two-info {
+  width: 340rpx;
+}
+
+.description {
+  max-height: 100rpx;
+  margin-top: 24rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.evaluation {
+  color: #808080;
+  font-size: 12px;
+}
+
+.footer {
+  bottom: 30rpx;
+  left: 30rpx;
+  position: fixed;
+}
+
+.footer-button {
+  width: 690rpx;
+  height: 130rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  font-size: 17px;
+  color: #FFF;
+}
+
+.like {
+  background-color: #FFF;
+  color: #FF7070;
+  border: #FF7070 2px solid;
+}
+
+.liked {
+  background-color: #FF7070;
+}
+
+.like-hover {
+  background-color: #FFB0B0;
+}
+
+.share {
+  background-color: #FFBD73;
+}
+
+.share-hover {
+  background-color: #E1A96B;
+}
+
+.footer-text {
+  font-size: 17px;
+}
+
+page {
+  background-color: #F5F5F5;
+  padding-bottom: 140rpx;
+}

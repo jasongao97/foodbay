@@ -1,0 +1,48 @@
+<!--pages/detail/detail.wxml-->
+<view class="big-img">
+  <image src="{{picurl + board.pic}}" class="img" mode="aspectFill"></image>
+</view>
+<view class="container">
+  <view class="card">
+    <view class="block">
+      <view class="heading">
+        <text class="head-title">{{board.name}}</text>
+        <text class="sub-title">{{board.place + board.area + ' ' + board.price}}</text>
+      </view>
+      <view class="information">
+        <view class="left-two-info">
+          <view class="description">
+            <image style="width: 40rpx; height: 40rpx;" src="/images/s-popular.png"></image>
+            <image style="width: 104rpx; height: 28rpx; margin: 0 16rpx 0 16rpx;" src="{{imgurl+board.rate.popular+'.png'}}"></image>
+            <text class="evaluation">{{description.popular[board.rate.popular - 1]}}</text>
+          </view>
+          <view class="description">
+            <image style="width: 40rpx; height: 40rpx;" src="/images/s-time.png"></image>
+            <image style="width: 104rpx; height: 28rpx; margin: 0 16rpx 0 16rpx;" src="{{imgurl+board.rate.time+'.png'}}"></image>
+            <text class="evaluation">{{description.time[board.rate.time - 1]}}</text>
+          </view>
+        </view>
+        <view class="right-two-info">
+          <view class="description">
+            <image style="width: 40rpx; height: 40rpx;" src="/images/s-chilli.png"></image>
+            <image style="width: 104rpx; height: 28rpx; margin: 0 16rpx 0 16rpx;" src="{{imgurl+board.rate.chilli+'.png'}}"></image>
+            <text class="evaluation">{{description.chilli[board.rate.chilli - 1]}}</text>
+          </view>
+          <view class="description">
+            <image style="width: 40rpx; height: 40rpx;" src="/images/s-seat.png"></image>
+            <image style="width: 104rpx; height: 28rpx; margin: 0 16rpx 0 16rpx;" src="{{imgurl+board.rate.seat+'.png'}}"></image>
+            <text class="evaluation">{{description.seat[board.rate.seat - 1]}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="footer">
+    <view class="footer-button {{ifShare?'share':likeStyle}}" hover-class="{{ifShare?'share-hover':'like-hover'}}" bindtap="{{ifShare?'toIndex':'likeIt'}}">
+      <image style="width: 40rpx; height: 40rpx; margin-right: 20rpx;" wx:if="{{!ifShare}}" src="{{'/images/button-' + likeStyle + '.png'}}"></image>
+      <text>{{ifShare?'进入食贝':likeStyle == 'like' ? '收藏我' : '已收藏'}}</text>
+    </view>
+  </view>
+
+</view>

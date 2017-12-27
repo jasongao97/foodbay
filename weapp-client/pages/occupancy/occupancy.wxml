@@ -1,0 +1,69 @@
+<!--pages/occupancy/occupancy.wxml-->
+<view class="container">
+  <view class="ccard">
+    <view class="ctop">
+      <view class="cheading">
+        <text class="chead-title">{{title}}</text>
+        <text class="csub-title">{{statusdescription}}</text>
+      </view>
+      <view class="ccutline">
+        <view class="clegend" wx:for="{{information}}" wx:key="">
+          <image style="width: 20rpx; height: 20rpx;" src="{{'/images/legend/' + index + '.png'}}"></image>
+          <text class="carea">{{item.area + ' ' + item.name}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="canvas">
+      <canvas canvas-id="chart" />
+    </view>
+    <view class="ctag">
+      <text>{{time[0]}}</text>
+      <text>现在</text>
+      <text>{{time[2]}}</text>
+      <text>{{time[3]}}</text>
+      <text>{{time[4]}}</text>
+    </view>
+  </view>
+
+  <text class="hot-dish">为你推荐</text>
+
+  <view class="card" hover-class="hover-card" bindtap="toDetail">
+    <view class="heading">
+      <text class="head-title">{{dish.name}}</text>
+      <text class="sub-title">{{dish.place + dish.area + ' ' + dish.price}}</text>
+    </view>
+    <view class="information">
+      <view class="left-two-info">
+        <view class="description">
+          <image style="width: 44rpx; height: 44rpx;" src="/images/s-popular.png"></image>
+          <image style="width: 104rpx; height: 28rpx; margin: 0 16rpx 0 16rpx;" src="{{imgurl+dish.rate.popular+'.png'}}"></image>
+          <text class="evaluation">{{description.popular[dish.rate.popular - 1]}}</text>
+        </view>
+        <view class="description">
+          <image style="width: 44rpx; height: 44rpx;" src="/images/s-time.png"></image>
+          <image style="width: 104rpx; height: 28rpx; margin: 0 16rpx 0 16rpx;" src="{{imgurl+dish.rate.time+'.png'}}"></image>
+          <text class="evaluation">{{description.time[dish.rate.time - 1]}}</text>
+        </view>
+      </view>
+      <view class="right-two-info">
+        <view class="description">
+          <image style="width: 44rpx; height: 44rpx;" src="/images/s-chilli.png"></image>
+          <image style="width: 104rpx; height: 28rpx; margin: 0 16rpx 0 16rpx;" src="{{imgurl+dish.rate.chilli+'.png'}}"></image>
+          <text class="evaluation">{{description.chilli[dish.rate.chilli - 1]}}</text>
+        </view>
+        <view class="description">
+          <image style="width: 44rpx; height: 44rpx;" src="/images/s-seat.png"></image>
+          <image style="width: 104rpx; height: 28rpx; margin: 0 16rpx 0 16rpx;" src="{{imgurl+dish.rate.seat+'.png'}}"></image>
+          <text class="evaluation">{{description.seat[dish.rate.seat - 1]}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="footer">
+    <view class="footer-button" hover="true" hover-class="hover" bindtap="toIndex">
+      <text>{{ifShare?'进入食贝':'返回'}}</text>
+    </view>
+  </view>
+
+</view>

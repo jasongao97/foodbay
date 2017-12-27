@@ -1,0 +1,49 @@
+<!--foods.wxml-->
+<view class="container">
+  <view wx:if="{{!food.length}}" class="motto">
+    <text>你还没有收藏任何美食哦</text>
+    <text>点击下方食贝FM看一看吧</text>
+  </view>
+  <view class="card" wx:for="{{food}}" wx:key="" id="{{index}}" hover-class="hover-card" bindtap="toDetail">
+      <view class="heading">
+        <text class="head-title">{{item.name}}</text>
+        <text class="sub-title">{{item.place + item.area + ' ' + item.price}}</text>
+      </view>
+      <view class="information">
+        <view class="left-two-info">
+          <view class="description">
+            <image style="width: 44rpx; height: 44rpx;" src="/images/s-popular.png"></image>
+            <image style="width: 104rpx; height: 28rpx; margin: 0 16rpx 0 16rpx;" src="{{imgurl+item.rate.popular+'.png'}}"></image>
+            <text class="evaluation">{{description.popular[item.rate.popular - 1]}}</text>
+          </view>
+          <view class="description">
+            <image style="width: 44rpx; height: 44rpx;" src="/images/s-time.png"></image>
+            <image style="width: 104rpx; height: 28rpx; margin: 0 16rpx 0 16rpx;" src="{{imgurl+item.rate.time+'.png'}}"></image>
+            <text class="evaluation">{{description.time[item.rate.time - 1]}}</text>
+          </view>
+        </view>
+        <view class="right-two-info">
+          <view class="description">
+            <image style="width: 44rpx; height: 44rpx;" src="/images/s-chilli.png"></image>
+            <image style="width: 104rpx; height: 28rpx; margin: 0 16rpx 0 16rpx;" src="{{imgurl+item.rate.chilli+'.png'}}"></image>
+            <text class="evaluation">{{description.chilli[item.rate.chilli - 1]}}</text>
+          </view>
+          <view class="description">
+            <image style="width: 44rpx; height: 44rpx;" src="/images/s-seat.png"></image>
+            <image style="width: 104rpx; height: 28rpx; margin: 0 16rpx 0 16rpx;" src="{{imgurl+item.rate.seat+'.png'}}"></image>
+            <text class="evaluation">{{description.seat[item.rate.seat - 1]}}</text>
+          </view>
+        </view>
+      </view>
+  </view>
+
+  <view class="footer">
+    <button class="FM-button" hover-class="FM-button-hover" bindtap="toFM">
+      <text class="footer-text">食贝FM</text>
+    </button>
+    <button class="search-button" hover-class="search-button-hover" bindtap="toSearch">
+      <image style="width: 36rpx; height: 36rpx; margin-bottom: -4rpx;" src="/images/search-button.png"></image>
+    </button>
+  </view>
+  
+</view>

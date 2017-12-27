@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/occupancy/occupancy",
+    "pages/foods/foods",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/me/me",
+    "pages/fm/fm",
+    "pages/feedback/feedback",
+    "pages/about/about"
+  ],
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#FF7070",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "座位",
+        "iconPath": "images/seat.png",
+        "selectedIconPath": "images/seat-on.png"
+      },
+      {
+        "pagePath": "pages/foods/foods",
+        "text": "美食",
+        "iconPath": "images/foods.png",
+        "selectedIconPath": "images/foods-on.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me-on.png"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#222",
+    "navigationBarTitleText": "食贝",
+    "navigationBarTextStyle": "white"
+  }
+}

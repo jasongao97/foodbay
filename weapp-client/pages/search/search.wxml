@@ -1,0 +1,70 @@
+<!--pages/search/search.wxml-->
+<view class="header">
+  <view class="block">
+    <view class="searchspace">
+      <image style="width: 32rpx; height: 32rpx; margin-left: 18rpx; margin-right: 12rpx;" src="/images/search-icon.png"></image>
+      <input value="{{input}}" placeholder="搜索" focus placeholder-style="color: #D8D8D8;" class="search-input" bindinput="handleInput"/>
+    </view>
+    <text class="cancel-button" bindtap="toCancel">取消</text>
+  </view>
+</view>
+
+<view class="title-bar" wx:if="{{!food[0] && recenttag[0]}}">
+  <view class="block">
+    <text style="color: #5D5D5D">最近搜索</text>
+    <text style="color: #838383" bindtap="clearRecent">清除历史</text>
+  </view>
+</view>
+<view class="tag-bar" wx:if="{{!food[0] && recenttag[0]}}">
+  <view class="tag" wx:for="{{recenttag}}" wx:key="" id="{{item}}" bindtap="handletag">
+    <text>{{item}}</text>
+  </view>
+</view>
+
+<view class="title-bar" wx:if="{{!food[0]}}">
+  <view class="block">
+    <text style="color: #5D5D5D">热门搜索</text>
+  </view>
+</view>
+<view class="tag-bar" wx:if="{{!food[0]}}">
+  <view class="tag" wx:for="{{hottag}}" wx:key="" id="{{item}}" bindtap="handletag">
+    <text>{{item}}</text>
+  </view>
+</view>
+
+<view class="container">
+<view class="card" wx:for="{{food}}" wx:key="" id="{{index}}" hover-class="hover-card" bindtap="toDetail">
+    <view class="card-block">
+      <view class="heading">
+        <text class="head-title">{{item.name}}</text>
+        <text class="sub-title">{{item.place + item.area + ' ' + item.price}}</text>
+      </view>
+      <view class="information">
+        <view class="left-two-info">
+          <view class="description">
+            <image style="width: 44rpx; height: 44rpx;" src="/images/s-popular.png"></image>
+            <image style="width: 104rpx; height: 28rpx; margin: 0 16rpx 0 16rpx;" src="{{imgurl+item.rate.popular+'.png'}}"></image>
+            <text class="evaluation">{{description.popular[item.rate.popular - 1]}}</text>
+          </view>
+          <view class="description">
+            <image style="width: 44rpx; height: 44rpx;" src="/images/s-time.png"></image>
+            <image style="width: 104rpx; height: 28rpx; margin: 0 16rpx 0 16rpx;" src="{{imgurl+item.rate.time+'.png'}}"></image>
+            <text class="evaluation">{{description.time[item.rate.time - 1]}}</text>
+          </view>
+        </view>
+        <view class="right-two-info">
+          <view class="description">
+            <image style="width: 44rpx; height: 44rpx;" src="/images/s-chilli.png"></image>
+            <image style="width: 104rpx; height: 28rpx; margin: 0 16rpx 0 16rpx;" src="{{imgurl+item.rate.chilli+'.png'}}"></image>
+            <text class="evaluation">{{description.chilli[item.rate.chilli - 1]}}</text>
+          </view>
+          <view class="description">
+            <image style="width: 44rpx; height: 44rpx;" src="/images/s-seat.png"></image>
+            <image style="width: 104rpx; height: 28rpx; margin: 0 16rpx 0 16rpx;" src="{{imgurl+item.rate.seat+'.png'}}"></image>
+            <text class="evaluation">{{description.seat[item.rate.seat - 1]}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

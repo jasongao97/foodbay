@@ -1,0 +1,51 @@
+/* pages/help/help.wxss */
+.header {
+  color: #3E3E3E;
+  text-align: left;
+  font-size: 32px;
+  font-weight: bold;
+  margin-left: 40rpx;
+  margin-top: 36rpx;
+}
+
+.question {
+  color: #7B7B7B;
+  text-align: left;
+  font-size: 16px;
+  margin-top: 40rpx;
+  margin-left: 40rpx;
+}
+
+.answer {
+  color: #BBB;
+  text-align: left;
+  font-size: 14px;
+  margin: 20rpx 40rpx 0 40rpx;
+}
+
+.footer {
+  bottom: 30rpx;
+  left: 30rpx;
+  position: fixed;
+}
+
+.footer-button {
+  width: 690rpx;
+  text-align: center;
+  padding: 20rpx 0 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  color: #FFF;
+  background-color: #FF7070;
+}
+
+.button-hover {
+  background-color: #BD5050;
+}
+
+page {
+  background-color: #F5F5F5;
+}

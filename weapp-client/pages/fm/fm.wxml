@@ -1,0 +1,86 @@
+<!--pages/fm/fm.wxml-->
+<view class="square" wx:if="{{!onResult}}" animation="{{card1}}" style="z-index: 4;" bindtap="toGenerate">
+  <view class="front-card">
+    <view class="line">
+      <image style="width: 100rpx; height: 80rpx;" src="/images/shibei-icon.png"></image>
+    </view>
+  </view>
+</view>
+
+<view class="square" wx:if="{{!onResult}}" animation="{{card2}}" style="z-index: 3;">
+  <view class="front-card">
+    <view class="line">
+      <image style="width: 100rpx; height: 80rpx;" src="/images/shibei-icon.png"></image>
+    </view>
+  </view>
+</view>
+
+<view class="square" wx:if="{{!onResult}}" animation="{{card3}}" style="z-index: 2;">
+  <view class="front-card">
+    <view class="line">
+      <image style="width: 100rpx; height: 80rpx;" src="/images/shibei-icon.png"></image>
+    </view>
+  </view>
+</view>
+
+<view class="square" wx:if="{{!onResult}}" animation="{{card4}}" style="z-index: 1;">
+  <view class="front-card">
+    <view class="line">
+      <image style="width: 100rpx; height: 80rpx;" src="/images/shibei-icon.png"></image>
+    </view>
+  </view>
+</view>
+
+
+<view class="f-square" wx:if="{{onResult}}">
+  <view class="square-row">
+    <view class="card" id="0" hover-class="hover-card" bindtap="toDetail">
+      <view class="head-title">
+        <text>{{food[0].name}}</text>
+      </view>
+      <view class="sub-title">
+        <text>{{food[0].place + food[0].area + ' ' + food[0].price}}</text>
+      </view>
+      <image style="width: 270rpx; height: 220rpx" mode="aspectFill" src="{{picurl + food[0].pic}}"></image>
+    </view>
+    <view class="card" id="1" hover-class="hover-card" bindtap="toDetail">
+      <view class="head-title">
+        <text>{{food[1].name}}</text>
+      </view>
+      <view class="sub-title">
+        <text>{{food[1].place + food[1].area + ' ' + food[1].price}}</text>
+      </view>
+      <image style="width: 270rpx; height: 220rpx" mode="aspectFill" src="{{picurl + food[1].pic}}"></image>
+    </view>
+  </view>
+  <view class="square-row">
+    <view class="card" id="2" hover-class="hover-card" bindtap="toDetail">
+      <view class="head-title">
+        <text>{{food[2].name}}</text>
+      </view>
+      <view class="sub-title">
+        <text>{{food[2].place + food[2].area + ' ' + food[2].price}}</text>
+      </view>
+      <image style="width: 270rpx; height: 220rpx" mode="aspectFill" src="{{picurl + food[2].pic}}"></image>
+    </view>
+    <view class="card" id="3" hover-class="hover-card" bindtap="toDetail">
+      <view class="head-title">
+        <text>{{food[3].name}}</text>
+      </view>
+      <view class="sub-title">
+        <text>{{food[3].place + food[3].area + ' ' + food[3].price}}</text>
+      </view>
+      <image style="width: 270rpx; height: 220rpx" mode="aspectFill" src="{{picurl + food[3].pic}}"></image>
+    </view>
+  </view>
+</view>
+
+<view class="footer">
+  <view class="motto">
+    <text>{{onResult?"没有我想吃的？":"现在是 " + date}}</text>
+    <navigator url="/pages/feedback/feedback" class="report" wx:if="{{onResult}}">告诉我们</navigator>
+  </view>
+  <button class="{{onResult?'footer-button-result':'footer-button-before'}}" hover-class="{{onResult?'footer-button-result-hover':'footer-button-before-hover'}}" bindtap="{{onResult?'toCancel':'toGenerate'}}" disabled="{{ifLoading?true:false}}" loading="{{ifLoading?true:false}}">
+    {{ifLoading?'思考中':onResult?'本次推荐如上，' + timeleft + '分钟后再来哦':'看看今天吃什么好'}}
+  </button>
+</view>

@@ -1,0 +1,74 @@
+/* pages/me/me.wxss */
+.card {
+  background-color: #FFF;
+  width: 690rpx;
+  margin-bottom: 30rpx;
+  border-radius: 3px;
+  box-shadow: 0px 2px 3px rgba(60,60,60,0.05);
+  position: flex;
+  flex-direction: column;
+}
+
+.hover-card {
+  background-color: #EEEEEE;
+}
+
+.head-card {
+  background-image: linear-gradient(to bottom, rgba(255,145,132,0.8), rgba(255,122,122,0.9)),
+  url(http://pic.ustb.wang/image/mlxg.jpg?imageMogr2/auto-orient/thumbnail/x250/format/jpg/blur/1x0/quality/100|imageslim);
+  background-position:center;
+}
+
+.userinfo {
+  margin: 60rpx 40rpx 40rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.userinfo-avatar {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+
+.nickName {
+  margin-top: 20rpx;
+  font-size: 20px;
+}
+
+.motto {
+  font-size: 14px;
+}
+
+.button-block {
+  margin: 30rpx 40rpx 30rpx 40rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.word-block {
+  margin: 36rpx 40rpx 36rpx 40rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.bold {
+  font-weight: bold;
+  color: #3E3E3E;
+}
+
+contact-button {
+  margin-right: 20rpx;
+}
+
+page {
+  background-color: #E4E4E4;
+}

@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="card {{one.checked?'':'d-card'}}" wx:for="{{place}}" wx:key="" id="{{index}}" wx:for-item="one" wx:if="{{ifEdit == false?one.checked:true}}" hover-class="{{ifEdit ? false : 'hover-card'}}" bindtap="{{ifEdit ? '' : 'toOccupancy'}}">
+    <view class="block">
+      <view class="information">
+        <view class="heading">
+          <text class="head-title">{{one.title}}</text>
+        </view>
+        <view class="description" wx:for="{{place[index].information}}" wx:key="" wx:for-item="idx" wx:if="{{one.checked}}">
+          <text class="place-name">{{idx.area + ' ' + idx.name}}</text>
+          <view wx:for="{{str}}" wx:key="" wx:for-index="i">
+            <image class="single-block" wx:if="{{str[i] <= idx.state[status]}}" src="/images/red-block.png"></image>
+            <image class="single-block" wx:if="{{str[i] > idx.state[status]}}" src="/images/grey-block.png"></image>
+          </view>
+        </view>
+      </view>
+      <switch type="checkbox" checked="{{one.checked}}" id="{{index}}" color="#FF7070" bindchange="switchChange" wx:if="{{ifEdit == true}}" />
+    </view>
+  </view>
+  <button class="footer-button" hover-class="footer-button-hover" bindtap="{{ifEdit ? 'finnishEdit' : 'toEdit'}}" wx:if="{{ifShowEdit}}">
+    <text class="footer-text">{{ifEdit ? '完成编辑' : '点击以编辑位置'}}</text>
+  </button>
+</view>

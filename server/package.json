@@ -1,0 +1,21 @@
+{
+  "name": "ustb-food",
+  "version": "0.0.1",
+  "description": "server part of 食贝FM",
+  "main": "shibei.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasongao97/ustb-food.git"
+  },
+  "author": "jason",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongodb": "^2.2.26",
+    "request": "^2.81.0"
+  }
+}

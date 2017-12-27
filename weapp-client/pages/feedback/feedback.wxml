@@ -1,0 +1,36 @@
+<!--pages/help/help.wxml-->
+<view class="header">
+  <text>请问有什么可以帮您？</text>
+</view>
+<view class="question">
+  <text>为什么食贝FM使用一次要等半小时？</text>
+</view>
+<view class="answer">
+  <text>答：因为食贝FM是为了帮助您更好的决定吃什么呀~ 当然您也可以在这里</text>
+  <text bindtap="clearTimer" style="text-decoration: underline;">点击以清除倒计时</text>
+  <text>。</text>
+</view>
+<view class="question">
+  <text>首页食堂怎么编辑？</text>
+</view>
+<view class="answer">
+  <text>答：点击首页编辑位置按钮然后点击每一个食堂的开关来控制是否显示，之后点击完成即可。（该功能可在“我的”中关闭）</text>
+</view>
+<view class="question">
+  <text>我收藏的美食不见了？</text>
+</view>
+<view class="answer">
+  <text>答：这可能是因为后台调整造成的，应该会在一段时间后恢复，如果仍未恢复请联系客服</text>
+</view>
+<view class="question">
+  <text>为什么美食详情的那个图那么好看?</text>
+</view>
+<view class="answer">
+  <text>答：这可能是因为“图片仅供参考”</text>
+</view>
+
+<view class="footer">
+  <button class="footer-button" hover-class="button-hover" bindtap="handletap">
+    <text class="footer-text">联系客服</text>
+  </button>
+</view>

@@ -1,0 +1,26 @@
+<!--pages/me/me.wxml-->
+<view class="container">
+  <view class="card head-card">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+      <text class="nickName">{{userInfo.nickName}}</text>
+      <text class="motto">欢迎来到食贝</text>
+    </view>
+  </view>
+  <view class="card">
+    <view class="button-block">
+      <text class="bold">开启食堂编辑</text>
+      <switch checked="{{ifShowCanteenEdit}}" color="#FF7070" bindchange="switchCanteenEdit"/>
+    </view>
+  </view>
+  <view class="card" hover-class="hover-card" bindtap="toHelp">
+    <view class="word-block">
+      <text class="bold">帮助反馈</text>
+    </view>
+  </view>
+  <view class="card" hover-class="hover-card" bindtap="toAbout">
+    <view class="word-block">
+      <text class="bold">关于食贝</text>
+    </view>
+  </view>
+</view>

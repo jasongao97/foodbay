@@ -1,0 +1,157 @@
+/* pages/occupancy/occupancy.wxss */
+.ccard {
+  background-color: #FFF;
+  width: 630rpx;
+  border-radius: 3px;
+  box-shadow: 0px 2px 3px rgba(40,40,40,0.05);
+  margin-bottom: 20rpx;
+  padding: 30rpx 30rpx 40rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.ctop {
+  width: 626rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+canvas {
+  width: 280px;
+  height: 180px;
+}
+
+.cheading {
+  display: flex;
+  flex-direction: column;
+}
+
+.ctag {
+  width: 300px;
+  font-size: 10px;
+  color: #949494;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ccutline {
+  display: flex;
+  flex-direction: column;
+}
+
+.clegend {
+  width: 86px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carea {
+  font-size: 11px;
+  color: #808080;
+  margin-bottom: 6rpx;
+}
+
+.chead-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3E3E3E;
+}
+
+.csub-title {
+  font-size: 12px;
+  color: #808080;
+  margin-top: 10rpx;
+}
+
+.hot-dish {
+  width: 690rpx;
+  font-size: 13px;
+  color: #B1B1B1;
+  text-align: left;
+}
+
+/*style for food-card*/
+
+.card {
+  background-color: #FFF;
+  width: 630rpx;
+  margin: 15rpx 0 30rpx;
+  border-radius: 3px;
+  box-shadow: 0px 2px 3px rgba(40,40,40,0.05);
+  padding: 30rpx 30rpx 30rpx 30rpx;
+  position: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.hover-card {
+  background-color: #EEEEEE;
+}
+
+.head-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3E3E3E;
+}
+
+.sub-title {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #808080;
+}
+
+.information {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-two-info {
+  width: 340rpx;
+}
+
+.description {
+  max-height: 100rpx;
+  margin-top: 24rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.evaluation {
+  color: #808080;
+  font-size: 12px;
+}
+
+.footer {
+  bottom: 30rpx;
+  left: 30rpx;
+  position: fixed;
+  z-index: 2;
+}
+
+.footer-button {
+  width: 690rpx;
+  padding: 40rpx 0 40rpx;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #FFBD73;
+  border-radius: 10rpx;
+  font-size: 17px;
+  color: #FFF;
+}
+
+.hover {
+  background-color: #E1A96B;
+}
+
+page {
+  background-color: #E4E4E4;
+  padding-bottom: 140rpx;
+}
